@@ -3,8 +3,17 @@ import './App.css'
 
 const WEDDING_DATE = new Date('2027-07-09T09:00:00+05:30').getTime()
 const GUESTBOOK_KEY = 'ashwin-amritha-guestbook-v1'
-
-const SECRET_MESSAGES = [
+const mapUrl =
+  'https://www.google.com/maps/dir/?api=1&destination=Lalith+Mahal+Kalyana+Mandapam,+Anakottil+Street,+West+Fort,+Thiruvananthapuram,+Kerala+695023'
+<a
+  className="map-link"
+  href={mapUrl}
+  target="_blank"
+  rel="noreferrer"
+>s
+  GET VENUE DIRECTIONS ↗
+</a>
+  const SECRET_MESSAGES = [
   'Your presence is the most beautiful gift you could bring. Thank you for being part of our celebration!',
   'Today is about love, laughter, and the people who make life special. We are so glad you are here.',
   'May this celebration leave you with lovely memories and a heart full of happiness.',
@@ -48,7 +57,7 @@ function CouplePortrait({ className = '' }) {
   return (
     <img
       className={`couple-portrait ${className}`}
-      src="/couple-cartoon.png"
+      src={`${import.meta.env.BASE_URL}couple-cartoon.png`}
       alt="Ashwin and Amritha in their wedding attire"
     />
   )
@@ -226,7 +235,7 @@ function App() {
               <span className="envelope-front" />
 
               <span className="envelope-seal">
-                <img src="/wedding-logo.png" alt="" />
+                <img src={`${import.meta.env.BASE_URL}wedding-logo.png`} alt="" />
               </span>
             </span>
 
