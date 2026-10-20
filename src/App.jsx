@@ -245,7 +245,7 @@ function App() {
 
       <header className="navbar">
         <a className="brand" href="#home" aria-label="Home">
-          <img src="/wedding-logo.png" alt="Wedding monogram" />
+          <img src={`${import.meta.env.BASE_URL}wedding-logo.png`} alt="Wedding monogram" />
         </a>
 
         <nav className="nav-links" aria-label="Main navigation">
@@ -622,7 +622,7 @@ function App() {
       </section>
 
       <footer className="footer">
-        <img src="/wedding-logo.png" alt="Wedding monogram" />
+        <img src={`${import.meta.env.BASE_URL}wedding-logo.png`} alt="Wedding monogram" />
         <p>With love,</p>
         <h2>
           Ashwin <span>&amp;</span> Amritha
