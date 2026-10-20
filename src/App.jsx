@@ -3,17 +3,11 @@ import './App.css'
 
 const WEDDING_DATE = new Date('2027-07-09T09:00:00+05:30').getTime()
 const GUESTBOOK_KEY = 'ashwin-amritha-guestbook-v1'
+
 const mapUrl =
-  'https://www.google.com/maps/dir/?api=1&destination=Lalith+Mahal+Kalyana+Mandapam,+Anakottil+Street,+West+Fort,+Thiruvananthapuram,+Kerala+695023'
-<a
-  className="map-link"
-  href={mapUrl}
-  target="_blank"
-  rel="noreferrer"
->s
-  GET VENUE DIRECTIONS ↗
-</a>
-  const SECRET_MESSAGES = [
+  'https://www.google.com/maps/dir/?api=1&destination=Lalith+Mahal+Kalyana+Mandapam%2C+Thiruvananthapuram%2C+Kerala'
+
+const SECRET_MESSAGES = [
   'Your presence is the most beautiful gift you could bring. Thank you for being part of our celebration!',
   'Today is about love, laughter, and the people who make life special. We are so glad you are here.',
   'May this celebration leave you with lovely memories and a heart full of happiness.',
@@ -23,7 +17,7 @@ const mapUrl =
   'Remember to smile, celebrate, enjoy the food, and make wonderful memories!',
   'The best celebrations are made brighter by the people who fill them with happiness. Welcome!',
   'Thank you for taking the time to celebrate with us. Your presence makes this occasion even more meaningful.',
-  'Here is to happy hearts, beautiful memories, and a celebration made brighter by having you here. Enjoy the day!',
+  'Here is to happy hearts, beautiful memories, and a celebration made brighter by having you here. Enjoy the day!'
 ]
 
 const TREASURES = [
@@ -32,8 +26,9 @@ const TREASURES = [
   { id: 'sparkle', symbol: '✧', hint: 'Take a look near the event details.' },
 ]
 
+
 function getTimeLeft() {
-  const difference = Math.max(0, WEDDING_DATE - Date.now())
+const difference = Math.max(0, WEDDING_DATE - Date.now())
 
   return {
     days: Math.floor(difference / 86400000),
